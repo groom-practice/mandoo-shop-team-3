@@ -73,7 +73,9 @@ signupBtn.addEventListener("click", () => {
   
   if(isConfirm){
     alert("회원가입이 완료되었습니다. 로그인 페이지로 이동합니다.");
-    localStorage.setItem("signupUserInfo", JSON.stringify(signupUserInfo));
+    const userInfo = JSON.parse(localStorage.getItem("signupUserInfo")) ?? [];
+    const newUserInfo = [...userInfo, signupUserInfo]
+    localStorage.setItem("signupUserInfo", JSON.stringify(newUserInfo));
     location.href="../login/index.html";
   } else {
     alert("회원가입에 실패했습니다.");
