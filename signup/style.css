@@ -1,0 +1,72 @@
+body {
+  display: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  /* flex 설정 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* 크기 여백 설정 */
+  width: 50%;
+  height: 50%;
+  padding: 10px;
+
+  /* 기타 설정 */
+  border: 1px solid gray;
+  border-radius: 3px;
+  box-shadow: 2px 2px rgba(44, 24, 24, 0.5);
+}
+
+/* signup text 설정 */
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid gray;
+  margin: 10px 0;
+}
+
+.signupBtnNav {
+  margin: 10px 0;
+}
+
+.signupBtnNav > button {
+  display: inline-block;
+  font-size: 15px;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: royalblue;
+  color: white;
+  cursor: pointer;
+}
+
+.signupBtnNav > a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.signupBtnNav > a:hover, :active {
+  color: royalblue;
+}

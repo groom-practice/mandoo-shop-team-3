@@ -96,9 +96,3 @@ ul.addEventListener("click", (event) => {
       return;
   }
 });
-
-
-
-
-
-

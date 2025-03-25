@@ -1,0 +1,113 @@
+/* ---------- 제목 스타일 ---------- */
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ---------- 장바구니 전체 컨테이너 스타일 ---------- */
+.cart {
+  display: flex;
+  flex-direction: column; /* 요소들을 세로 방향으로 배치 */
+  justify-content: center;
+  position: relative;
+  align-items: center; /* 세로축 중앙 정렬 */
+  height: 80%;
+  width: 50%;
+  padding: 20px;
+  border-radius: 5px;
+  min-width: 300px; /* 최소 너비 보장 */
+
+  border: 2px solid #ccc;
+}
+/* ---------- 리스트 스타일 ---------- */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  font-size: 18px;
+  margin-top: 30px;
+  text-decoration: none; /* 글씨 밑줄 및 색상 제거 */
+  color: black;
+}
+a:hover,
+a:active {
+  color: royalblue;
+}
+
+/* ---------- 버튼 스타일  ---------- */
+
+.btn-group {
+  display: flex; /* 버튼 가로 정렬 */
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* 넘치면 자동 줄바꿈 (수평 정렬) */
+  justify-content: center; /* 줄바꿈되더라도 가운데 정렬 */
+}
+
+button {
+  width: 200px;
+  max-width: 100%;
+  height: 40px;
+  background-color: #364cd9;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.2s ease-out;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #2939a2;
+}
+
+/* ------------- cart item ------------*/
+.empty-cart {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.item-box {
+  width: 80%; /* 부모 기준(cart) 채우기 */
+  max-width: 600px;
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 0;
+  list-style: none;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.qty-info {
+  font-size: 14px;
+  color: gray;
+}
+
+.cart-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
