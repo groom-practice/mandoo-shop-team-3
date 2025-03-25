@@ -5,7 +5,7 @@ const cart = JSON.parse(localStorage.getItem("cartItems")) || [];
 if (cart.length === 0) {
   const li = document.createElement("li");
   li.classList.add("empty-cart");
-  li.innerHTML = "<span>장바구니에 상품이 없습니다.</span>";
+  li.innerHTML = "<span>장바구니에 상품이 없습니다..</span>";
   document.querySelector("ul").appendChild(li);
 }
 
