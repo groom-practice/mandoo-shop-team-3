@@ -1,6 +1,6 @@
 const PRODUCT_LENGTH = 10;
 
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
+const cart = JSON.parse(localStorage.getItem("cartItems")) || [];
 
 if (cart.length === 0) {
   const li = document.createElement("li");
@@ -23,7 +23,9 @@ cart.forEach((element) => {
     const itemId = `item-${element.id}`;
 
     li.innerHTML = `
-    <input type="checkbox" id="${itemId}" /><label for="${itemId}">${element.productName}</label>
+    <input type="checkbox" id="${itemId}" />
+    <img src="../imgs/${element.productImgFileName}" alt="${element.productName}" class="cart-img" />
+    <label for="${itemId}">${element.productName}</label>
   `;
     document.querySelector("ul").appendChild(li);
   }
@@ -57,14 +59,14 @@ document.querySelector(".SDBtn").addEventListener("click", () => {
 
     li.remove();
 
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cart = JSON.parse(localStorage.getItem("cartiItems")) || [];
     const newCart = cart.filter((item) => item.id !== Number(id));
     localStorage.setItem("cart", JSON.stringify(newCart));
   });
 });
 // 전체삭제 버튼 이벤트
 document.querySelector(".ADBtn").addEventListener("click", () => {
-  localStorage.removeItem("cart");
+  localStorage.removeItem("cartItems");
 
   const ul = document.querySelector(".item-box");
   ul.innerHTML = "";
